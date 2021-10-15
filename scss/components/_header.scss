@@ -1,0 +1,60 @@
+@import "../utils/settings";
+
+//styles that belongs to header
+.product-slide__container {
+    position: relative;
+    margin: 0 auto;
+
+
+
+    .product-item {
+        display: none;
+    }
+
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media (min-width:760px) {
+    .product-slide__container {
+        position: relative;
+        margin: 0;
+
+
+        .product-item {
+            display: none;
+
+            .sneakers {
+                border-radius: 10px;
+            }
+        }
+
+    }
+
+}

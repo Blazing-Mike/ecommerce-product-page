@@ -1,0 +1,49 @@
+@import "../utils/settings";
+
+.container {
+    min-height: 70vh;
+}
+
+.product__description {
+    padding: 10px 15px;
+    max-width: 30rem;
+
+    .med-heading {
+        padding: 15px 0;
+    }
+}
+
+.cart-section {
+
+    .price {
+        padding: 0;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media (min-width:760px) {
+
+    .product__description {
+        padding: 10px 15px;
+
+
+        .med-heading {
+            padding: 15px 0;
+        }
+    }
+
+    .cart-section {
+        .price {
+            padding: 0;
+            justify-content: space-between;
+            width: 10rem;
+
+        }
+    }
+
+    .thumbnail-section {
+        display: flex;
+    }
+}

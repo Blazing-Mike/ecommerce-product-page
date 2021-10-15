@@ -1,0 +1,55 @@
+// this contains variables for colors, height, border-radius, mixins, font-sizes, etc
+$primary-color:hsl(26, 100%, 55%);
+;
+$secondary-color: hsl(25, 100%, 94%);
+$dark-blue: hsl(220, 13%, 13%);
+$grayish-blue-2: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-graysh-blue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%); // (with 75% opacity for lightbox background)
+
+.gap {
+    gap: 5px;
+}
+
+.gap-x {
+    gap: 1rem;
+}
+
+.gap-xx {
+    gap: 2rem;
+}
+
+.gap-xxx {
+    gap: 4rem;
+}
+
+.cart-image {
+    width: 1.7rem;
+}
+
+.profile {
+    width: 1.7rem;
+}
+
+.sneakers {
+    width: 375px;
+    height: 375px;
+
+}
+
+.thumbnail {
+    width: 4.5rem;
+    border-radius: 10px;
+    display: none;
+
+}
+
+@media (min-width:760px) {
+    .thumbnail {
+
+        display: flex;
+
+    }
+}

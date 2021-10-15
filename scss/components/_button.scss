@@ -1,0 +1,150 @@
+@import "../utils/settings";
+
+//styles that belongs to buttons
+.Navbar__toggle,
+.closebtn {
+    z-index: 2;
+
+    .bar {
+        width: 17px;
+        height: 2px;
+        background: $black;
+        color: $black;
+        margin: 4px 0;
+    }
+}
+
+
+.closebtn {
+    display: none;
+
+    .one {
+        transform: rotate(135deg);
+    }
+
+    .two {
+        transform: rotate(-135deg);
+        margin-top: -5px;
+    }
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 0.6s ease;
+    user-select: none;
+    top: 50%;
+    background: $White;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 20px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+
+.next-icon,
+.prev-icon {
+    width: 0.5rem;
+}
+
+.discount-percent {
+    width: 2.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    background: $secondary-color;
+    border: transparent;
+    border-radius: 3px;
+    padding-left: 10px;
+
+}
+
+.cart-calculate {
+    width: 20rem;
+    font-weight: 600;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: transparent;
+    background: $light-graysh-blue;
+    margin: 1rem 3%;
+    outline: none;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 7rem;
+
+    .small-heading {
+        font-size: 1rem;
+    }
+}
+
+.calculate-icon {
+    width: 15px;
+    position: absolute;
+}
+
+.plus-icon {
+    margin-top: -10px;
+}
+
+.btn-submit {
+    width: 18rem;
+    font-weight: 600;
+    height: 2.5rem;
+    background: $primary-color;
+    color: $White;
+    border-radius: 5px;
+    border: transparent;
+    margin: 0 3%;
+    box-shadow: -1px 4px 19px 0px $secondary-color;
+
+    .cart-image {
+        fill: $White;
+        padding-right: 10px;
+
+    }
+}
+
+@media (min-width:760px) {
+
+    .Navbar__toggle,
+    .closebtn {
+        display: none;
+
+        .bar {
+            display: none;
+        }
+    }
+
+    .cart-calculate {
+        width: 10rem;
+
+        gap: 2rem;
+
+        .small-heading {
+            font-size: 1rem;
+        }
+    }
+
+    .btn-submit {
+        width: 15rem;
+
+
+        .cart-image {
+            fill: $White;
+            padding-right: 10px;
+
+        }
+    }
+
+}
