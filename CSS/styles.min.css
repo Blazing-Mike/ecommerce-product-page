@@ -358,7 +358,10 @@ h5 {
       font-size: 1.2rem; }
 
 .cart-modal-toggle {
-  display: block; }
+  display: block;
+  box-shadow: 3px 9px 30px 3px rgba(182, 188, 200, 0.65);
+  -webkit-box-shadow: 3px 9px 30px 3px rgba(182, 188, 200, 0.65);
+  -moz-box-shadow: 3px 9px 30px 3px rgba(182, 188, 200, 0.65); }
 
 .cart-item .thumbnail-para {
   font-size: 0.8rem; }
