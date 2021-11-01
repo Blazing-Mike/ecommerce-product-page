@@ -1,139 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./CSS/styles.min.css">
-  
+
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-<div class="Navbar flex-aligned">
-<div class=".Navbar__left flex-aligned gap-x">
+  <div class="Navbar flex-aligned">
+    <div class=".Navbar__left flex-aligned gap-x">
 
-  <div class="Navbar__toggle">
-    <div class="bar one"></div>
-    <div class="bar two"></div>
-    <div class="bar three"></div>
-     </div>
-
-     <div class="closebtn">
-      <div class="bar one"></div>
-      <div class="bar two"></div>
-       </div>
-   
-     <div class="Navbar__logo">
-       <img src="./images/logo.svg" alt="logo" class="logo">
-     </div>
-   
-</div>
-  
-  <nav class="Navbar__items">
-    <a href="#" class="Navbar__items-link">Collections</a>
-    <a href="#" class="Navbar__items-link">Men</a>
-    <a href="#" class="Navbar__items-link">Women</a>
-    <a href="#" class="Navbar__items-link">About</a>
-    <a href="#" class="Navbar__items-link">Contact</a>
-  </nav>
-
-  <div class="Navbar__extra flex-aligned gap-x">
-    <img src="./images/icon-cart.svg" alt="icon-cart" class="cart-image">
-    <img src="./images/image-avatar.png" alt="image-avatar" class="profile">
-</div>
-</div>
-
-<div class="container flex-perfect fw-wrap gap-xx">
-
-<div class="product-slide__container fade">
-  <div class="product-item ">
-    <img src="./images/image-product-1.jpg" alt="image-product-1" class="sneakers">
-  </div>
-
-  <div class="product-item fade">
-    <img src="./images/image-product-2.jpg" alt="image-product-2" class="sneakers">
-  </div>
-
-  <div class="product-item fade">
-    <img src="./images/image-product-3.jpg" alt="image-product-3" class="sneakers">
-  </div>
-  <div class="product-item fade">
-    <img src="./images/image-product-4.jpg" alt="image-product-4" class="sneakers">
-  </div>
-  <a class="prev flex-perfect" onclick="plusSlides(-1)">
-  <img src="./images/icon-previous.svg" alt="icon-previous" class="prev-icon">
-</a>
-  <a class="next flex-perfect" onclick="plusSlides(1)">
-    <img src="./images/icon-next.svg" alt="icon-previous" class="next-icon"></a>
-
-    <div class="flex-aligned gap-x thumbnail-section">
-      <div class="column">
-        <img src="./images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" class="hover-shadow thumbnail">
+      <div class="Navbar__toggle">
+        <div class="bar one"></div>
+        <div class="bar two"></div>
+        <div class="bar three"></div>
       </div>
-      <div class="column">
-        <img src="./images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" class="hover-shadow thumbnail">
+
+      <div class="closebtn">
+        <div class="bar one"></div>
+        <div class="bar two"></div>
       </div>
-      <div class="column">
-        <img src="./images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" class="hover-shadow thumbnail">
+
+      <div class="Navbar__logo">
+        <img src="./images/logo.svg" alt="logo" class="logo">
       </div>
-      <div class="column">
-        <img src="./images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" class="hover-shadow thumbnail">
+
+    </div>
+
+    <nav class="Navbar__items">
+      <a href="#" class="Navbar__items-link">Collections</a>
+      <a href="#" class="Navbar__items-link">Men</a>
+      <a href="#" class="Navbar__items-link">Women</a>
+      <a href="#" class="Navbar__items-link">About</a>
+      <a href="#" class="Navbar__items-link">Contact</a>
+    </nav>
+
+    <div class="Navbar__extra flex-aligned gap-xx">
+      <div class="cart-container flex-aligned">
+        <img src="./images/icon-cart.svg" alt="icon-cart" class="cart-image">
+        <div class="notification">
+          <p class=" para bold-text cart-number"> 0</p>
+        </div>
+      </div>
+
+      <img src="./images/image-avatar.png" alt="image-avatar" class="profile">
+    </div>
+  </div>
+
+  <div class="flex-perfect">
+    <div class="cart-modal">
+      <h2 class="med-heading">Cart</h2>
+
+      <div class="flex-perfect empty-cart">
+        <p class="para bold-text">Your cart is empty</p>
+      </div>
+
+      <div class="gap-x cart-item">
+        <div class=" thumbnail-container flex-aligned">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" class="modal-thumbnail">
+        </div>
+        <div class="thumbnail-desc">
+          <p class="thumbnail-para">Autumn Limited Edition</p>
+          <p class="thumnnail-para">$125.00 * <span class="no-of-items"></span> <span class="bold-text">$375.00</span>
+          </p>
+        </div>
+
+        <div class="delete-btn">
+          <img src="./images/icon-delete.svg" alt="icon-delete" class="delete-icon">
+        </div>
+      </div>
+      <div class="flex-perfect">
+        <button class="checkout bold-text">
+          Checkout
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="container flex-perfect fw-wrap gap-xx">
+
+    <div class="product-slide__container fade">
+      <div class="product-item ">
+        <img src="./images/image-product-1.jpg" alt="image-product-1" class="sneakers">
+      </div>
+
+      <div class="product-item fade">
+        <img src="./images/image-product-2.jpg" alt="image-product-2" class="sneakers">
+      </div>
+
+      <div class="product-item fade">
+        <img src="./images/image-product-3.jpg" alt="image-product-3" class="sneakers">
+      </div>
+      <div class="product-item fade">
+        <img src="./images/image-product-4.jpg" alt="image-product-4" class="sneakers">
+      </div>
+      <a class="prev flex-perfect" onclick="plusSlides(-1)">
+        <img src="./images/icon-previous.svg" alt="icon-previous" class="prev-icon">
+      </a>
+      <a class="next flex-perfect" onclick="plusSlides(1)">
+        <img src="./images/icon-next.svg" alt="icon-previous" class="next-icon"></a>
+
+      <div class="flex-aligned gap-x thumbnail-section">
+        <div class="column">
+          <img src="./images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" class="hover-shadow thumbnail">
+        </div>
+        <div class="column">
+          <img src="./images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" class="hover-shadow thumbnail">
+        </div>
+        <div class="column">
+          <img src="./images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" class="hover-shadow thumbnail">
+        </div>
+        <div class="column">
+          <img src="./images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" class="hover-shadow thumbnail">
+        </div>
       </div>
     </div>
-</div>
 
-<div class="product__description">
-  <h2 class="small-heading comapany-name">Sneaker Company</h2>
+    <div class="product__description">
+      <h2 class="small-heading comapany-name">Sneaker Company</h2>
 
-<h3 class="med-heading">  Fall Limited Edition <br> Sneakers
-</h3>
+      <h3 class="med-heading"> Fall Limited Edition <br> Sneakers
+      </h3>
 
-<p class="para">
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-</p>
-
-<div class="cart-section">
-  <div class="price flex-aligned fw-wrap">
-  <div class="left flex-aligned gap-x">
-    <h3 class="med-heading">$125.00</h3> 
-    <button class="discount-percent flex-perfect">   50%</button>
-  </div>
-<h3 class="small-heading original-price">    $250.00</h3> 
-  </div>
-<div class="cart-counter__add-cart flex-perfect fw-wrap">
-  <div class="input-item flex-aligned">
-    <button class="cart-calculate flex-aligned">
-      <p href="#" class="cart-btn minus-icon">
-        <img src="./images/icon-minus.svg" alt="icon-minus" class="calculate-icon ">
+      <p class="para">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
-        <h3 class="small-heading count">0</h3>
-      <a href="#" class="cart-btn plus-icon">
-        <img src="./images/icon-plus.svg" alt="icon-plus" class="calculate-icon">
-      </a>
-  </button>
+
+      <div class="cart-section">
+        <div class="price flex-aligned fw-wrap">
+          <div class="left flex-aligned gap-x">
+            <h3 class="med-heading">$125.00</h3>
+            <button class="discount-percent flex-perfect"> 50%</button>
+          </div>
+          <h3 class="small-heading original-price"> $250.00</h3>
+        </div>
+        <div class="cart-counter__add-cart flex-perfect fw-wrap">
+          <div class="input-item flex-aligned">
+            <button class="cart-calculate flex-aligned">
+              <p href="#" class="cart-btn minus-icon">
+                <img src="./images/icon-minus.svg" alt="icon-minus" class="calculate-icon ">
+              </p>
+              <h3 class="small-heading count">0</h3>
+              <a href="#" class="cart-btn plus-icon">
+                <img src="./images/icon-plus.svg" alt="icon-plus" class="calculate-icon">
+              </a>
+            </button>
+          </div>
+
+          <button class="btn-submit flex-justify"><img src="./images/icon-cart-two.svg" alt="icon-cart"
+              class="cart-image"> Add to cart</button>
+        </div>
+
+      </div>
+    </div>
   </div>
-    
-   <button class="btn-submit flex-justify"><img src="./images/icon-cart-two.svg" alt="icon-cart" class="cart-image"> Add to cart</button>
-</div>
-
-</div>
-</div>
-</div>
 
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+
+  <div class="attribution flex-perfect">
+    Challenge by Frontend Mentor</a>.
+    Coded by <a href="#">Michael</a>.
   </div>
   <script src="./script.js"></script>
 </body>
+
 </html>

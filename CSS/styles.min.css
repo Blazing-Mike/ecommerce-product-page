@@ -190,10 +190,12 @@ h5 {
 @media (min-width: 760px) {
   .Navbar__toggle,
   .closebtn {
-    display: none; }
+    display: none;
+    z-index: 9; }
     .Navbar__toggle .bar,
     .closebtn .bar {
-      display: none; }
+      display: none;
+      z-index: 8; }
   .cart-calculate {
     width: 10rem;
     gap: 2rem; }
@@ -204,6 +206,15 @@ h5 {
     .btn-submit .cart-image {
       fill: white;
       padding-right: 10px; } }
+
+.notification {
+  width: 30px;
+  height: 20px;
+  background: #ff7d1a;
+  border-radius: 10px;
+  margin-top: -10px;
+  margin-left: -10px;
+  display: none; }
 
 .gap {
   gap: 5px; }
@@ -248,6 +259,10 @@ h5 {
 .cart-section .price {
   padding: 0;
   justify-content: space-between; }
+
+.attribution {
+  margin: 1rem 0;
+  font-size: 15px; }
 
 @media (min-width: 760px) {
   .product__description {
@@ -311,6 +326,51 @@ h5 {
   to {
     opacity: 1; } }
 
+.cart-modal {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  top: 30%;
+  background: white;
+  border-radius: 10px;
+  width: 19rem;
+  height: 220px;
+  z-index: 1; }
+  .cart-modal .cart-item {
+    display: none;
+    margin-top: 10px; }
+  .cart-modal .checkout {
+    display: none;
+    padding: 10px;
+    background: #ff7d1a;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    width: 16rem;
+    margin: 2rem 0;
+    font-size: 1rem; }
+  .cart-modal .med-heading {
+    border-bottom: 1px solid #000;
+    padding: 5px  0; }
+  .cart-modal .empty-cart {
+    margin-top: 2rem; }
+    .cart-modal .empty-cart .para {
+      font-size: 1.2rem; }
+
+.cart-modal-toggle {
+  display: block; }
+
+.cart-item .thumbnail-para {
+  font-size: 0.8rem; }
+
+.cart-item .modal-thumbnail {
+  width: 4rem;
+  border-radius: 10px; }
+
+.cart-item .delete-icon {
+  width: 1.5rem;
+  margin-left: 1rem; }
+
 @media (min-width: 760px) {
   .product-slide__container {
     position: relative;
@@ -318,7 +378,11 @@ h5 {
     .product-slide__container .product-item {
       display: none; }
       .product-slide__container .product-item .sneakers {
-        border-radius: 10px; } }
+        border-radius: 10px; }
+  .cart-modal {
+    position: absolute;
+    right: 15%;
+    top: 10%; } }
 
 .gap {
   gap: 5px; }
@@ -372,7 +436,8 @@ h5 {
     background: white;
     z-index: 1; }
   .Navbar .Navbar__toggleshow {
-    width: 50%; }
+    width: 50%;
+    z-index: 3; }
 
 @media (min-width: 760px) {
   .Navbar {
