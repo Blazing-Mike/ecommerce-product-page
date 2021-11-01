@@ -51,7 +51,9 @@
     width: 19rem;
     height: 220px;
     z-index: 1;
-    //margin-top: 17rem;
+    box-shadow: 3px 9px 30px 3px rgba(182,188,200,0.65);
+-webkit-box-shadow: 3px 9px 30px 3px rgba(182,188,200,0.65);
+-moz-box-shadow: 3px 9px 30px 3px rgba(182,188,200,0.65);
 
     .cart-item{
     display: none;
